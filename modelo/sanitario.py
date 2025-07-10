@@ -55,7 +55,7 @@ class Sanitario(Base):
     semoviente_id = Column(Integer, ForeignKey("semoviente.id_semoviente"), nullable=False)
     nombre_semo = Column(String(100), nullable=False)
     condicion = Column(Enum(CondicionEnum), nullable=False)
-    foto = Column(String(255)) #enlace fotografico
+    foto = Column(String(255))
 
     # Asociación a ciclo (opcional)
     ciclo_id = Column(Integer, ForeignKey("ciclo_sanitario.id"))
